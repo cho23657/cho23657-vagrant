@@ -32,7 +32,9 @@ service mysqld start
 # Check that MySQL is started
 mysql -u root -e "SHOW DATABASES"
 
-# Download Starter Content
-
+# Download Starter Content from GitHub
+cd /vagrant
+sudo -u vagrant wget -q https://raw.githubusercontent.com/cho23657/cho23657-vagrant/master/files/index.html
+sudo -u vagrant wget -q https://raw.githubusercontent.com/cho23657/cho23657-vagrant/master/files/info.php
 # Retart Apache
 service httpd restart
